@@ -66,12 +66,6 @@
             label14 = new Label();
             comboBox1 = new ComboBox();
             tabPage4 = new TabPage();
-            tabPage5 = new TabPage();
-            AssistyPanel = new Panel();
-            txtAssisty = new RichTextBox();
-            button3 = new Button();
-            btnIssues = new Button();
-            button4 = new Button();
             btnSubmit4 = new Button();
             textBox3 = new TextBox();
             label15 = new Label();
@@ -81,6 +75,23 @@
             dateTimePicker2 = new DateTimePicker();
             label18 = new Label();
             comboBox2 = new ComboBox();
+            tabPage5 = new TabPage();
+            AssistyPanel = new Panel();
+            txtAssisty = new RichTextBox();
+            button3 = new Button();
+            btnIssues = new Button();
+            button4 = new Button();
+            menuStrip1 = new MenuStrip();
+            toolStripMenuItem1 = new ToolStripMenuItem();
+            assistyLogToolStripMenuItem = new ToolStripMenuItem();
+            issuesToolStripMenuItem = new ToolStripMenuItem();
+            fisTicketToolStripMenuItem = new ToolStripMenuItem();
+            aboutToolStripMenuItem = new ToolStripMenuItem();
+            toolStripMenuItem2 = new ToolStripMenuItem();
+            assityLogToolStripMenuItem = new ToolStripMenuItem();
+            internalIssuesToolStripMenuItem = new ToolStripMenuItem();
+            fisTicketsToolStripMenuItem = new ToolStripMenuItem();
+            aboutToolStripMenuItem1 = new ToolStripMenuItem();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
@@ -88,6 +99,7 @@
             tabPage4.SuspendLayout();
             tabPage5.SuspendLayout();
             AssistyPanel.SuspendLayout();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // txtSentence1
@@ -469,70 +481,6 @@
             tabPage4.UseVisualStyleBackColor = true;
             tabPage4.Click += tabPage4_Click;
             // 
-            // tabPage5
-            // 
-            tabPage5.Controls.Add(AssistyPanel);
-            tabPage5.Location = new Point(4, 34);
-            tabPage5.Name = "tabPage5";
-            tabPage5.Size = new Size(768, 451);
-            tabPage5.TabIndex = 4;
-            tabPage5.Text = "Assisty";
-            tabPage5.UseVisualStyleBackColor = true;
-            tabPage5.Click += tabPage5_Click;
-            // 
-            // AssistyPanel
-            // 
-            AssistyPanel.AutoScroll = true;
-            AssistyPanel.Controls.Add(txtAssisty);
-            AssistyPanel.Dock = DockStyle.Fill;
-            AssistyPanel.Location = new Point(0, 0);
-            AssistyPanel.Name = "AssistyPanel";
-            AssistyPanel.Size = new Size(768, 451);
-            AssistyPanel.TabIndex = 1;
-            // 
-            // txtAssisty
-            // 
-            txtAssisty.Location = new Point(0, 3);
-            txtAssisty.Name = "txtAssisty";
-            txtAssisty.ReadOnly = true;
-            txtAssisty.ScrollBars = RichTextBoxScrollBars.Vertical;
-            txtAssisty.Size = new Size(762, 360);
-            txtAssisty.TabIndex = 0;
-            txtAssisty.Text = "";
-            // 
-            // button3
-            // 
-            button3.Location = new Point(53, 539);
-            button3.Name = "button3";
-            button3.Size = new Size(112, 34);
-            button3.TabIndex = 7;
-            button3.Text = "AssistyLog";
-            button3.UseVisualStyleBackColor = true;
-            button3.Visible = false;
-            button3.Click += button3_Click;
-            // 
-            // btnIssues
-            // 
-            btnIssues.Location = new Point(53, 599);
-            btnIssues.Name = "btnIssues";
-            btnIssues.Size = new Size(112, 34);
-            btnIssues.TabIndex = 8;
-            btnIssues.Text = "Issues";
-            btnIssues.UseVisualStyleBackColor = true;
-            btnIssues.Visible = false;
-            btnIssues.Click += button4_Click;
-            // 
-            // button4
-            // 
-            button4.Location = new Point(53, 676);
-            button4.Name = "button4";
-            button4.Size = new Size(112, 34);
-            button4.TabIndex = 9;
-            button4.Text = "FIS Tickets";
-            button4.UseVisualStyleBackColor = true;
-            button4.Visible = false;
-            button4.Click += button4_Click_1;
-            // 
             // btnSubmit4
             // 
             btnSubmit4.Location = new Point(421, 365);
@@ -610,11 +558,151 @@
             comboBox2.Size = new Size(182, 33);
             comboBox2.TabIndex = 27;
             // 
+            // tabPage5
+            // 
+            tabPage5.Controls.Add(AssistyPanel);
+            tabPage5.Location = new Point(4, 34);
+            tabPage5.Name = "tabPage5";
+            tabPage5.Size = new Size(768, 451);
+            tabPage5.TabIndex = 4;
+            tabPage5.Text = "Assisty";
+            tabPage5.UseVisualStyleBackColor = true;
+            tabPage5.Click += tabPage5_Click;
+            // 
+            // AssistyPanel
+            // 
+            AssistyPanel.AutoScroll = true;
+            AssistyPanel.Controls.Add(txtAssisty);
+            AssistyPanel.Dock = DockStyle.Fill;
+            AssistyPanel.Location = new Point(0, 0);
+            AssistyPanel.Name = "AssistyPanel";
+            AssistyPanel.Size = new Size(768, 451);
+            AssistyPanel.TabIndex = 1;
+            // 
+            // txtAssisty
+            // 
+            txtAssisty.Location = new Point(0, 3);
+            txtAssisty.Name = "txtAssisty";
+            txtAssisty.ReadOnly = true;
+            txtAssisty.ScrollBars = RichTextBoxScrollBars.Vertical;
+            txtAssisty.Size = new Size(762, 360);
+            txtAssisty.TabIndex = 0;
+            txtAssisty.Text = "";
+            // 
+            // button3
+            // 
+            button3.Location = new Point(53, 539);
+            button3.Name = "button3";
+            button3.Size = new Size(112, 34);
+            button3.TabIndex = 7;
+            button3.Text = "AssistyLog";
+            button3.UseVisualStyleBackColor = true;
+            button3.Visible = false;
+            button3.Click += button3_Click;
+            // 
+            // btnIssues
+            // 
+            btnIssues.Location = new Point(53, 599);
+            btnIssues.Name = "btnIssues";
+            btnIssues.Size = new Size(112, 34);
+            btnIssues.TabIndex = 8;
+            btnIssues.Text = "Issues";
+            btnIssues.UseVisualStyleBackColor = true;
+            btnIssues.Visible = false;
+            btnIssues.Click += button4_Click;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(53, 676);
+            button4.Name = "button4";
+            button4.Size = new Size(112, 34);
+            button4.TabIndex = 9;
+            button4.Text = "FIS Tickets";
+            button4.UseVisualStyleBackColor = true;
+            button4.Visible = false;
+            button4.Click += button4_Click_1;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.ImageScalingSize = new Size(24, 24);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, toolStripMenuItem2 });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(800, 33);
+            menuStrip1.TabIndex = 10;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { assistyLogToolStripMenuItem, issuesToolStripMenuItem, fisTicketToolStripMenuItem, aboutToolStripMenuItem });
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(16, 29);
+            toolStripMenuItem1.Click += toolStripMenuItem1_Click;
+            // 
+            // assistyLogToolStripMenuItem
+            // 
+            assistyLogToolStripMenuItem.Name = "assistyLogToolStripMenuItem";
+            assistyLogToolStripMenuItem.Size = new Size(199, 34);
+            assistyLogToolStripMenuItem.Text = "AssistyLog";
+            // 
+            // issuesToolStripMenuItem
+            // 
+            issuesToolStripMenuItem.Name = "issuesToolStripMenuItem";
+            issuesToolStripMenuItem.Size = new Size(199, 34);
+            issuesToolStripMenuItem.Text = "Issues";
+            // 
+            // fisTicketToolStripMenuItem
+            // 
+            fisTicketToolStripMenuItem.Name = "fisTicketToolStripMenuItem";
+            fisTicketToolStripMenuItem.Size = new Size(199, 34);
+            fisTicketToolStripMenuItem.Text = "FisTicket";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            aboutToolStripMenuItem.Size = new Size(199, 34);
+            aboutToolStripMenuItem.Text = "About";
+            // 
+            // toolStripMenuItem2
+            // 
+            toolStripMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { assityLogToolStripMenuItem, internalIssuesToolStripMenuItem, fisTicketsToolStripMenuItem, aboutToolStripMenuItem1 });
+            toolStripMenuItem2.Name = "toolStripMenuItem2";
+            toolStripMenuItem2.Size = new Size(65, 29);
+            toolStripMenuItem2.Text = "Help";
+            // 
+            // assityLogToolStripMenuItem
+            // 
+            assityLogToolStripMenuItem.Name = "assityLogToolStripMenuItem";
+            assityLogToolStripMenuItem.Size = new Size(270, 34);
+            assityLogToolStripMenuItem.Text = "AssityLog";
+            assityLogToolStripMenuItem.Click += assityLogToolStripMenuItem_Click;
+            // 
+            // internalIssuesToolStripMenuItem
+            // 
+            internalIssuesToolStripMenuItem.Name = "internalIssuesToolStripMenuItem";
+            internalIssuesToolStripMenuItem.Size = new Size(270, 34);
+            internalIssuesToolStripMenuItem.Text = "Internal Issues";
+            internalIssuesToolStripMenuItem.Click += internalIssuesToolStripMenuItem_Click;
+            // 
+            // fisTicketsToolStripMenuItem
+            // 
+            fisTicketsToolStripMenuItem.Name = "fisTicketsToolStripMenuItem";
+            fisTicketsToolStripMenuItem.Size = new Size(270, 34);
+            fisTicketsToolStripMenuItem.Text = "Fis Tickets";
+            fisTicketsToolStripMenuItem.Click += fisTicketsToolStripMenuItem_Click;
+            // 
+            // aboutToolStripMenuItem1
+            // 
+            aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
+            aboutToolStripMenuItem1.Size = new Size(270, 34);
+            aboutToolStripMenuItem1.Text = "About";
+            aboutToolStripMenuItem1.Click += aboutToolStripMenuItem1_Click;
+            // 
             // MainScreen
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 522);
+            ClientSize = new Size(800, 518);
             Controls.Add(button4);
             Controls.Add(btnIssues);
             Controls.Add(button3);
@@ -625,6 +713,8 @@
             Controls.Add(label1);
             Controls.Add(txtSentence2);
             Controls.Add(txtSentence1);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
             Name = "MainScreen";
             Text = "Main Screen";
             Load += MainScreen_Load;
@@ -639,6 +729,8 @@
             tabPage4.PerformLayout();
             tabPage5.ResumeLayout(false);
             AssistyPanel.ResumeLayout(false);
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -698,5 +790,16 @@
         private DateTimePicker dateTimePicker2;
         private Label label18;
         private ComboBox comboBox2;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem toolStripMenuItem1;
+        private ToolStripMenuItem assistyLogToolStripMenuItem;
+        private ToolStripMenuItem issuesToolStripMenuItem;
+        private ToolStripMenuItem fisTicketToolStripMenuItem;
+        private ToolStripMenuItem aboutToolStripMenuItem;
+        private ToolStripMenuItem toolStripMenuItem2;
+        private ToolStripMenuItem assityLogToolStripMenuItem;
+        private ToolStripMenuItem internalIssuesToolStripMenuItem;
+        private ToolStripMenuItem fisTicketsToolStripMenuItem;
+        private ToolStripMenuItem aboutToolStripMenuItem1;
     }
 }

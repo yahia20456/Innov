@@ -206,7 +206,7 @@ namespace AssistyWin
                         Height = 30,
                         Left = 10,
                         Top = yOffset,
-                        Font = new System.Drawing. Font("Segoe UI", 9, FontStyle.Regular),
+                        Font = new System.Drawing.Font("Segoe UI", 9, FontStyle.Regular),
                         Tag = actions
 
                     };
@@ -314,7 +314,7 @@ namespace AssistyWin
                                 string body = $"Assisty has triggered a communication based on rule: {ruleName}.\n\n Assisty do the following:\n\n" + messageToSend;
 
                                 // Send the email (see step 3 below)
-                                bool sent = SendEmail(email, subject, body,"");
+                                bool sent = SendEmail(email, subject, body, "");
 
                                 if (sent)
                                     MessageBox.Show($"📧 Email sent to {email}", "Assisty Communicate", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -424,13 +424,10 @@ namespace AssistyWin
                                 description: $"Assity apply {actionName} - {detail}",
                                 timestamp: DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
                             );
-                        }
+                        } 
 
-
-
-
-                        MessageBox.Show($"Assisty is applying:\n\n{action.ActionName}\n\n{action.ActionDetail}",
-                                            "Assisty Action", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                      //  MessageBox.Show($"Assisty is applying:\n\n{action.ActionName}\n\n{action.ActionDetail}",
+                         //                   "Assisty Action", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
                 }
@@ -439,7 +436,7 @@ namespace AssistyWin
             }
         }
 
-        private bool SendEmail(string to, string subject, string body , string? attachement)
+        private bool SendEmail(string to, string subject, string body, string? attachement)
         {
             try
             {
@@ -556,9 +553,9 @@ namespace AssistyWin
         private void AppendBoldText(string text)
         {
             txtAssisty.SelectionStart = txtAssisty.TextLength;
-            txtAssisty.SelectionFont =   new System.Drawing.Font(txtAssisty.Font, FontStyle.Bold);
+            txtAssisty.SelectionFont = new System.Drawing.Font(txtAssisty.Font, FontStyle.Bold);
             txtAssisty.AppendText(text);
-            txtAssisty.SelectionFont =   new System.Drawing.Font(txtAssisty.Font, FontStyle.Regular); // reset to normal
+            txtAssisty.SelectionFont = new System.Drawing.Font(txtAssisty.Font, FontStyle.Regular); // reset to normal
         }
 
 
@@ -591,7 +588,7 @@ namespace AssistyWin
                 }
             }
 
-            if (!allowBackdate)
+            if (!allowBackdate && dtValuedate.Value.Date < DateTime.Today)
             {
                 AssistyLogDLA.Add(
                 user: user,
@@ -600,7 +597,9 @@ namespace AssistyWin
                 description: $"User trying to Submit : {selectedTab}" + " Error: Back dated transaction not allowed",
                 timestamp: timestamp);
 
-                string msg = $"Backdated value date is not allowed.\nSystemConfig.ALLOW_BACKDATE = FALSE\n\nWould you like Assisty to help you resolve this issue?";
+                //string msg = $"Backdated value date is not allowed.\nSystemConfig.ALLOW_BACKDATE = FALSE\n\nWould you like Assisty to help you resolve this issue?";
+                string msg = $"Transaction failed to be submitted, Would you like Assisty to help you resolve this issue?";
+
                 var result = MessageBox.Show(msg, "Assisty Detected an Issue", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
@@ -671,9 +670,14 @@ namespace AssistyWin
                 description: $"User trying to Submit : {selectedTab}" + " Error: Counterparty not configured",
                 timestamp: timestamp);
 
+                //DialogResult result = MessageBox.Show(
+                //    $"Counterparty '{counterparty}' is not configured.\nWould you like Assisty to help?",
+                //    "Assisty Detected an Issue", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
                 DialogResult result = MessageBox.Show(
-                    $"Counterparty '{counterparty}' is not configured.\nWould you like Assisty to help?",
-                    "Assisty Detected an Issue", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        $"Transaction failed to be submitted, Would you like Assisty to help?",
+                        "Assisty Detected an Issue", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
 
                 if (result == DialogResult.Yes)
                 {
@@ -735,9 +739,14 @@ namespace AssistyWin
                 description: $"User trying to Submit : {selectedTab}" + " Error: User not authorized to submit",
                 timestamp: timestamp);
 
+                //DialogResult result = MessageBox.Show(
+                //    $"Screen Permission '{selectedTab}' is not Enabled.\nWould you like Assisty to help?",
+                //    "Assisty Detected an Issue", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 DialogResult result = MessageBox.Show(
-                    $"Screen Permission '{selectedTab}' is not Enabled.\nWould you like Assisty to help?",
+                    $"Transaction failed to be submitted, Would you like Assisty to help?",
                     "Assisty Detected an Issue", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                
 
                 if (result == DialogResult.Yes)
                 {
@@ -800,10 +809,13 @@ namespace AssistyWin
                timestamp: timestamp);
 
 
+                 
 
                 DialogResult result = MessageBox.Show(
-                    $"Would you like Assisty to help?",
-                    "Assisty Detected an Issue", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                   $"Transaction failed to be submitted,  Would you like Assisty to help?",
+                   "Assisty Detected an Issue", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                
+
 
                 if (result == DialogResult.Yes)
                 {
@@ -829,7 +841,7 @@ namespace AssistyWin
 
 
         //Generate Assisty Support Report  
-        public string GenerateAssistyReportWithScreenshot(  System.Windows.Forms. Control screenControl)
+        public string GenerateAssistyReportWithScreenshot(System.Windows.Forms.Control screenControl)
         {
             string docPath = Path.Combine(Path.GetTempPath(), $"Assisty_Report_{DateTime.Now:yyyyMMdd_HHmmss}.docx");
             string screenImgPath = Path.Combine(Path.GetTempPath(), $"screen_{Guid.NewGuid()}.jpg");
@@ -934,6 +946,30 @@ namespace AssistyWin
             return bmp;
         }
 
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void assityLogToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new AssistyLog().Show();
+        }
+
+        private void internalIssuesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Issuesfrm().Show();
+        }
+
+        private void fisTicketsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FISTicket().Show();
+        }
+
+        private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Assisty v1.0\nAI-Powered Autonomous Support Tool.", "About Assisty");
+
+        }
     }
 }
