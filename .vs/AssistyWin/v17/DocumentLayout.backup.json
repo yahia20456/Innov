@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\FIS Project\\AssistyWinBackup\\AssistyWin\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F9207D90-2441-4B5D-9473-024B35ADC987}|AssistyWin.csproj|c:\\fis project\\assistywinbackup\\assistywin\\mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9207D90-2441-4B5D-9473-024B35ADC987}|AssistyWin.csproj|solutionrelative:mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9207D90-2441-4B5D-9473-024B35ADC987}|AssistyWin.csproj|c:\\fis project\\assistywinbackup\\assistywin\\mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F9207D90-2441-4B5D-9473-024B35ADC987}|AssistyWin.csproj|solutionrelative:mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9207D90-2441-4B5D-9473-024B35ADC987}|AssistyWin.csproj|c:\\fis project\\assistywinbackup\\assistywin\\issuesfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F9207D90-2441-4B5D-9473-024B35ADC987}|AssistyWin.csproj|solutionrelative:issuesfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainScreen.cs",
+              "DocumentMoniker": "C:\\FIS Project\\AssistyWinBackup\\AssistyWin\\MainScreen.cs",
+              "RelativeDocumentMoniker": "MainScreen.cs",
+              "ToolTip": "C:\\FIS Project\\AssistyWinBackup\\AssistyWin\\MainScreen.cs",
+              "RelativeToolTip": "MainScreen.cs",
+              "ViewState": "AgIAAH4BAAAAAAAAAAASwJIBAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T22:27:15.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainScreen.cs [Design]",
+              "DocumentMoniker": "C:\\FIS Project\\AssistyWinBackup\\AssistyWin\\MainScreen.cs",
+              "RelativeDocumentMoniker": "MainScreen.cs",
+              "ToolTip": "C:\\FIS Project\\AssistyWinBackup\\AssistyWin\\MainScreen.cs [Design]",
+              "RelativeToolTip": "MainScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T22:27:10.82Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Issuesfrm.cs [Design]",
+              "DocumentMoniker": "C:\\FIS Project\\AssistyWinBackup\\AssistyWin\\Issuesfrm.cs",
+              "RelativeDocumentMoniker": "Issuesfrm.cs",
+              "ToolTip": "C:\\FIS Project\\AssistyWinBackup\\AssistyWin\\Issuesfrm.cs [Design]",
+              "RelativeToolTip": "Issuesfrm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T22:25:58.499Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

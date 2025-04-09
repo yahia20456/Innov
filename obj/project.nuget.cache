@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "dgSpecHash": "mQ0EGOYlWrI=",
+  "success": true,
+  "projectFilePath": "C:\\FIS Project\\AssistyWinBackup\\AssistyWin\\AssistyWin.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\malak\\.nuget\\packages\\documentformat.openxml\\3.3.0\\documentformat.openxml.3.3.0.nupkg.sha512",
+    "C:\\Users\\malak\\.nuget\\packages\\documentformat.openxml.framework\\3.3.0\\documentformat.openxml.framework.3.3.0.nupkg.sha512",
+    "C:\\Users\\malak\\.nuget\\packages\\docx\\1.0.0.19\\docx.1.0.0.19.nupkg.sha512",
+    "C:\\Users\\malak\\.nuget\\packages\\microsoft.data.sqlite.core\\9.0.3\\microsoft.data.sqlite.core.9.0.3.nupkg.sha512",
+    "C:\\Users\\malak\\.nuget\\packages\\sqlitepclraw.core\\2.1.10\\sqlitepclraw.core.2.1.10.nupkg.sha512",
+    "C:\\Users\\malak\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.119\\stub.system.data.sqlite.core.netstandard.1.0.119.nupkg.sha512",
+    "C:\\Users\\malak\\.nuget\\packages\\system.data.sqlite.core\\1.0.119\\system.data.sqlite.core.1.0.119.nupkg.sha512",
+    "C:\\Users\\malak\\.nuget\\packages\\system.io.packaging\\8.0.1\\system.io.packaging.8.0.1.nupkg.sha512",
+    "C:\\Users\\malak\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'DocX 1.0.0.19' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "DocX",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    }
+  ]
+}
